@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: tomato;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+    border-radius: 10px;
+}
+
+.container .h1 {
+    font-size: 3rem;
+    padding: 20px 0px 20px 0px;
+}
+
+form .userInput {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: black;
+}
+
+.btn:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+p {
+    font-size: 2rem;
+    padding: 8px;
+    margin: 10 0 10 0;
+}
