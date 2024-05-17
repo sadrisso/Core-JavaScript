@@ -17,7 +17,7 @@ const playGame = (userChoice) => {
 
     if (userChoice === compChoice) {
         drawGame();
-    }
+    } 
 }
 
 
