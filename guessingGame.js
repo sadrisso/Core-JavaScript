@@ -7,6 +7,7 @@ let attempts = document.querySelector('.attempts')
 let attempt = 0;
 let totalAttempts = 5;
 
+
 form.addEventListener('submit', (evt) => 
 {
     evt.preventDefault();
@@ -42,14 +43,12 @@ const playGame = (userGuess) =>
         console.log(`You win, your choice ${userGuess} & Computer choice ${randomNumber}`)
         msg.innerText = `You win, your choice ${userGuess} & Computer choice ${randomNumber}`
         container.style.backgroundColor = 'green';
-        container.innerText = `Remaining attempts = ${totalAttempts} - ${attempt}`
     } 
     else 
     {
         console.log(`You lost, your choice ${userGuess} & Computer choice ${randomNumber}`)
         msg.innerText = `You lost, your choice ${userGuess} & Computer choice ${randomNumber}`
         container.style.backgroundColor = 'red';
-        container.innerText = `Remaining attempts = ${totalAttempts} - ${attempt}`
     }
     
 } 
