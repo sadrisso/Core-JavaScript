@@ -81,3 +81,18 @@ $('#loginBtn').click((e) =>
     }
 
 })
+
+
+// adding animations
+
+
+$('.btn').click(() => 
+{
+    // $('.div1').hide(1000).show(1000);
+    // $('.div1').toggle(1000);
+    // $('.div1').fadeIn(1000).fadeOut(1000);
+    // $('.div1').fadeToggle(1000);
+    // $('.div1').fadeTo(1000, 0.4);
+    // $('.div1').slideUp(1000).slideDown(1000);
+    $('.div1').slideToggle(1000);
+})
