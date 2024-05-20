@@ -22,3 +22,17 @@
     border-radius: 10px;
     margin-top: 50px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form2 {
+    margin: 50px 0px 50px 0px;
+}
+
+input {
+    margin: 10px 0px 10px 0px;
+}

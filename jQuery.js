@@ -48,7 +48,36 @@ $('.p1').addClass('style2 style1');
 
 // event listener
 
-$('.btn').click((evt) => {
+$('.btn').click((evt) => 
+{
     evt.preventDefault();
-    console.log('You have clicked the button!!')
+    $('body').after('Button was clicked!!')
+})
+
+$('.myBtn').on('click', () => 
+{
+    let value = this.innerHTML;
+    $('h2').text(value + ' is clicked');
+})
+
+
+// user login practice
+
+
+$('#loginBtn').click((e) => 
+{
+    e.preventDefault();
+    let pass1Val = $('#pass1').val();
+    let pass2Val = $('#pass2').val();
+
+    if (pass1Val != '' && pass2Val != '') {
+        if (pass1Val === pass2Val) {
+            alert('successfully login')
+        } else {
+            alert('password mismatch')
+        }
+    } else {
+        alert('please enter a password!')
+    }
+
 })
