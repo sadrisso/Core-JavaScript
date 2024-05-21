@@ -10,3 +10,8 @@ const clear_result = () =>
 {
     $("#result-field").val("");
 }
+
+const calculate = () => {
+    let result = eval($("#result-field").val());
+    $("#result-field").val(result);
+}
