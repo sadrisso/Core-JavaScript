@@ -94,5 +94,6 @@ $('.btn').click(() =>
     // $('.div1').fadeToggle(1000);
     // $('.div1').fadeTo(1000, 0.4);
     // $('.div1').slideUp(1000).slideDown(1000);
-    $('.div1').slideToggle(1000);
+    // $('.div1').slideToggle(1000);
+    $('.div1').animate({height: '400px', width: '70%'});
 })
