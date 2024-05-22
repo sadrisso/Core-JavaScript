@@ -55,12 +55,40 @@
 
 
 let form = $('form');
-let userChoice = $('.userChoice')
+let userChoice = $('.userChoice');
+let msg = $('.msg-container');
+let body = $('.container');
+let attempt = 0;
 
 
 form.submit((evt) => 
 {
     evt.preventDefault();
     let userValue = Number(userChoice.val());
-    console.log(userValue);
+    attempt ++;
+    if (attempt === 6) {
+        userChoice.disabled = true;
+    } if (attempt < 6) {
+        playGame(userValue)
+    }
 })
+
+const playGame = (userValue) => 
+{
+    let compValue = genCompChoice(5)
+
+    if (userValue === compValue) {
+        console.log(`You win... Your choice: ${userValue} Comp choice: ${compValue}`)
+        msg.text(`You win... Your choice: ${userValue} Comp choice: ${compValue}`)
+        body.css({'backgroundColor': 'green'});
+    } else {
+        console.log(`You lost... Your choice: ${userValue} Comp choice: ${compValue}`)
+        msg.text(`You lost... Your choice: ${userValue} Comp choice: ${compValue}`)
+        body.css({'backgroundColor': 'red'});
+    }
+}
+
+const genCompChoice = (limit) => 
+{
+    return Math.floor(Math.random() * limit + 1);
+}
