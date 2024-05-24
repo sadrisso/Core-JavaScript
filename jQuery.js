@@ -70,7 +70,7 @@ $('#loginBtn').click((e) =>
     let pass1Val = $('#pass1').val();
     let pass2Val = $('#pass2').val();
 
-    if (pass1Val != '' && pass2Val != '') {
+    if (pass1Val && pass2Val != '') {
         if (pass1Val === pass2Val) {
             alert('successfully login')
         } else {
