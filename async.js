@@ -3,26 +3,26 @@
 // callback hell .........
 
 
-// const get_data = (id, get_next_data) => 
-// {
-//     setTimeout(() => 
-//     {
-//         console.log('Data', id)
-//         if (get_next_data) 
-//         {
-//             get_next_data();
-//         }
-//     }, 2000)
-// }
+const get_data = (id, get_next_data) => 
+{
+    setTimeout(() => 
+    {
+        console.log('Data', id)
+        if (get_next_data) 
+        {
+            get_next_data();
+        }
+    }, 2000)
+}
 
 
-// get_data(1, () => {
-//     get_data(2, () => {
-//         get_data(3, () => {
-//             get_data(4)
-//         });
-//     });
-// });
+get_data(1, () => {
+    get_data(2, () => {
+        get_data(3, () => {
+            get_data(4)
+        });
+    });
+});
 
 
 
@@ -30,30 +30,30 @@
 // promises ..........
 
 
-// let promise = new Promise((resolve, reject) => 
-// {
-//     console.log('I am a promise');
-//     resolve('Success..')
-// })
+let promisee = new Promise((resolve, reject) => 
+{
+    console.log('I am a promise');
+    resolve('Success..')
+})
 
-// console.log(promise)
+console.log(promisee)
 
 
 
-// const getData = (id) => {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log('This is data', id)
-//             resolve('success!')
-//         }, 2000)
-//     })
-// }
+const getData = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('This is data', id)
+            resolve('success!')
+        }, 2000)
+    })
+}
 
-// let promise = getData(111);
-// console.log(promise)
-// setTimeout(() => {
-//     console.log(promise)
-// }, 3000)
+let promise = getData(111);
+console.log(promise)
+setTimeout(() => {
+    console.log(promise)
+}, 3000)
 
 
 
