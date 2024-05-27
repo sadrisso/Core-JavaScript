@@ -1,6 +1,7 @@
 
 
 let URL = 'https://catfact.ninja/fact';
+let url = 'https://official-joke-api.appspot.com/random_joke';
 let body = document.querySelector('.body');
 let btn = document.querySelector('.btn');
 let newBtn = document.querySelector('.newBtn');
@@ -19,11 +20,11 @@ btn.addEventListener('click', getFacts);
 
 
 
-let url = 'https://official-joke-api.appspot.com/random_joke';
-
 const getData = async () => 
 {
+    console.log("getting data...")
     await fetch(url).then((response) => {
+        console.log(response)
         return response.json();
     }).then((data) => {
         body.innerHTML = data.punchline;
@@ -31,3 +32,22 @@ const getData = async () =>
 };
 
 newBtn.addEventListener('click', getData);
+
+
+
+
+let publicApiUrl = 'https://api.nationalize.io?name=nathaniel';
+
+let btnn = document.querySelector('.btnn')
+
+
+const getPublicDetails = async () => 
+{
+    console.log('getting data...')
+    let res = await fetch(publicApiUrl);
+    console.log(res)
+    let data = await res.json();
+    body.innerHTML = data.country[0];
+}
+
+btnn.addEventListener('click', getPublicDetails);
