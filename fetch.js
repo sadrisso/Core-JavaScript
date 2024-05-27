@@ -51,3 +51,20 @@ const getPublicDetails = async () =>
 }
 
 btnn.addEventListener('click', getPublicDetails);
+
+
+
+let universityList = 'http://universities.hipolabs.com/search?country=United+States';
+
+const getUniversityList = async () => 
+{
+    console.log('Loading...')
+    // let response = await fetch(universityList);
+    // let data = response.json();
+    // console.log(data)
+    await fetch(universityList).then((res) => {
+        return res.json();
+    }).then((data) => {
+        console.log(data)
+    })
+}
