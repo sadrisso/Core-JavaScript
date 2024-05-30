@@ -5,15 +5,14 @@ let dropdowns = document.querySelectorAll('.dropdown select');
 
 
 
-
-for (currCode in countryList) 
+for (select of dropdowns) 
 {
-    for (select of dropdowns)
+    for (currCode in countryList)
     {
         let newOption = document.createElement("option");
         newOption.innerText = currCode;
         newOption.value = currCode;
-        select.append(newOption);
+        select.append(newOption)
 
         if (select.name === "from" && currCode === "USD") {
             newOption.selected = "selected";
@@ -21,6 +20,20 @@ for (currCode in countryList)
             newOption.selected = "selected";
         }
     }
+
+    select.addEventListener("change", (evt) => {
+        update_flag(evt.target)
+    })
+}
+
+
+const update_flag = (element) => 
+{
+    let currCode = element.value;
+    let countryCode = countryList[currCode];
+    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    let img = element.parentElement.querySelector("img");
+    img.src = newSrc;
 }
 
 
