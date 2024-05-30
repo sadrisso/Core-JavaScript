@@ -5,16 +5,72 @@ let dropdowns = document.querySelectorAll('.dropdown select');
 
 
 
-for (select of dropdowns) 
+
+for (currCode of countryList) 
 {
-    for (currCode in countryList)
+    for (select in dropdowns)
     {
-        let newOption = document.createElement("option")
+        let newOption = document.createElement("option");
         newOption.innerText = currCode;
         newOption.value = currCode;
         select.append(newOption);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (select of dropdowns) 
+// {
+//     for (currCode in countryList)
+//     {
+//         let newOption = document.createElement("option")
+//         newOption.innerText = currCode;
+//         newOption.value = currCode;
+
+//         if (select.name === "from" && currCode === "USD") {
+//             newOption.selected = "selected";
+//         } else if (select.name === "to" && currCode === "BDT") {
+//             newOption.selected = "selected";
+//         }
+
+//         select.append(newOption);
+//     }
+// }
+
+
+
 
 
 
