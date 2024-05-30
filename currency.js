@@ -38,8 +38,17 @@ const update_flag = (element) =>
 
 
 
+let obj = {
+    name: 'drisso',
+    age: 23,
+    skill: 'nothing'
+}
 
+console.log(obj)
 
+for (o in obj) {
+    console.log(obj[o])
+}
 
 
 
