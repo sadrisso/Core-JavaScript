@@ -6,14 +6,20 @@ let dropdowns = document.querySelectorAll('.dropdown select');
 
 
 
-for (currCode of countryList) 
+for (currCode in countryList) 
 {
-    for (select in dropdowns)
+    for (select of dropdowns)
     {
         let newOption = document.createElement("option");
         newOption.innerText = currCode;
         newOption.value = currCode;
         select.append(newOption);
+
+        if (select.name === "from" && currCode === "USD") {
+            newOption.selected = "selected";
+        } else if (select.name === "to" && currCode === "BDT") {
+            newOption.selected = "selected";
+        }
     }
 }
 
