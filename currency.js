@@ -1,6 +1,7 @@
 
 let BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
 let dropdowns = document.querySelectorAll('.dropdown select');
+let btn = document.querySelector("form button");
 
 
  for (select of dropdowns)
@@ -19,7 +20,8 @@ let dropdowns = document.querySelectorAll('.dropdown select');
         }
     }
 
-    select.addEventListener("change", (e) => {
+    select.addEventListener("change", (e) => 
+    {
         update_flag(e.target)
     });
 }
@@ -34,6 +36,14 @@ const update_flag = (element) =>
     img.src = newSrc;
 }
 
+
+btn.addEventListener("click", (e) => 
+{
+    e.preventDefault();
+    let amount = document.querySelector(".amount input");
+    let amnVal = amount.value;
+    console.log(amnVal)
+})
 
 
 
