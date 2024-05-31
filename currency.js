@@ -18,10 +18,21 @@ let dropdowns = document.querySelectorAll('.dropdown select');
             newOption.selected = "selected";
         }
     }
+
+    select.addEventListener("change", (e) => {
+        update_flag(e.target)
+    });
 }
 
 
-
+const update_flag = (element) => 
+{
+    let currCode = element.value;
+    let countryCode = countryList[currCode];
+    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    let img = element.parentElement.querySelector("img");
+    img.src = newSrc;
+}
 
 
 
