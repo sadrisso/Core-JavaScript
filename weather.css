@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkblue;
+}
+
+.card {
+    margin: 0 auto;
+    width: 50vh;
+    height: 75vh;
+    border-radius: 40px;
+    background-color:crimson;
+    margin-top: 100px;
+}
+
+button img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.search {
+    text-align: center;
+}
+
+input {
+    width: 80%;
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 0;
+    outline: 0;
+}
+
+button {
+    width: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 0;
+    outline: 0;
+}
+img {
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.weather i {
+    font-size: 8rem;
+    color: white;
+    margin-top: 30px;
+}
+
+.weather {
+    text-align: center;
+}
+
+.desc {
+    margin-top: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    color: white;
+}
+
+div {
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.col i {
+    font-size: 2.5rem;
+}
+
+.col div {
+    font-size: 25px;
+    margin-left: 10px;
+}
