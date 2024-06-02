@@ -7,6 +7,7 @@ const humidity = document.querySelector(".humidity");
 const windSpeed = document.querySelector(".wind-speed");
 let inputField = document.querySelector(".search input");
 let btn = document.querySelector(".search button");
+let img = document.querySelector(".weather img");
 
 
 const get_weather_data = async (city) => 
@@ -25,6 +26,14 @@ const display_data = (data) =>
     temp.innerHTML = Math.round(data.main.temp) + "°c";
     humidity.innerHTML = data.main.humidity + "%";
     windSpeed.innerHTML = data.wind.speed + " km/h";
+
+    if (data.weather[0].main === "Clouds") {
+        img.src = "images/cloud-solid.svg";
+    } else if (data.weather[0].main === "Rain") {
+        img.src = "images/cloud-rain-solid.svg"
+    } else if (data.weather[0].main === "Clear") {
+        img.src = "images/cloud-sun-solid.svg"
+    }
 }
 
 

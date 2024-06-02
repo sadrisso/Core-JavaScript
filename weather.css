@@ -68,6 +68,11 @@ button:hover {
     margin-top: 40px;
 }
 
+.weather img {
+    width: 200px;
+    height: 100px;
+}
+
 .desc {
     margin-top: 20px;
     color: white;
