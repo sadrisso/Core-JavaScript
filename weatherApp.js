@@ -5,9 +5,11 @@ const temp = document.querySelector(".temp");
 const city = document.querySelector(".city");
 const humidity = document.querySelector(".humidity")
 let windSpeed = document.querySelector(".wind");
+let btn = document.querySelector(".search button");
+let inputField = document.querySelector(".search input");
 
 
-const get_weather_data = (async (city) => 
+const get_weather_data = async (city) => 
 {
     let response = await fetch(apiUrl + city + `&appid=${apiKey}`);
     let data = await response.json();
@@ -15,8 +17,7 @@ const get_weather_data = (async (city) =>
 
     display_weather_data(data)
 
-})("rangpur")
-
+}
 
 
 const display_weather_data = (data) => 
@@ -26,3 +27,10 @@ const display_weather_data = (data) =>
     city.innerHTML = data.name;
     windSpeed.innerHTML = data.wind.speed + " km/h";
 }
+
+
+btn.addEventListener("click", () => 
+{
+    get_weather_data(inputField.value);
+    inputField.value = "";
+})
