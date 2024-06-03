@@ -74,7 +74,7 @@
 
 .city {
     color: white;
-    font-size: 1.15rem;
+    font-size: 1.4rem;
     margin-left: 13px;
 }
 
@@ -88,12 +88,14 @@
 
 
 .footer i {
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: white;
+    margin-bottom: 10px;
 }
 
 .wind-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -101,10 +103,11 @@
 
 .humidity-div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .footer p {
-    margin-left: 10px;
+    font-size: 1.5rem;
 }
