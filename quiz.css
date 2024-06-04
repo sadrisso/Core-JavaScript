@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 90%;
+    max-width: 600px;
+    background-color: tomato;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1 {
+    font-size: 38px;
+    font-weight: 100;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.quiz h2 {
+    margin: 20px 0;
+    color: white;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0 10px 8px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: white;
+    outline: 0;
+    border: 1px solid black;
+    transition: 0.2s;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+}
+
+.nxt-btn {
+    background-color: indigo;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 40%;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid white;
+    margin: 10px 0 10px 160px;   
+}
+
+.nxt-btn:hover {
+    background-color: green;
+    cursor: pointer;
+}
