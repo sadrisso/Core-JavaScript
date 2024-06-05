@@ -5,7 +5,7 @@ const questions = [
             {text: 'shiyal', correct: false},
             {text: 'murgi', correct: false},
             {text: 'pakhi', correct: false},
-            {text: 'blue wheal', correct: ture}
+            {text: 'blue wheal', correct: ture},
         ]
     },
     {
@@ -40,3 +40,30 @@ const questions = [
 const ques = document.querySelector(".ques");
 const ansBtn = document.querySelector(".ans-buttons");
 const nxtBtn = document.querySelector(".nxt-btn")
+let crntQusIndx = 0;
+let score = 0;
+
+
+const start_quiz = () => 
+{
+    crntQusIndx = 0;
+    score = 0;
+    nxtBtn.innerHTML = "Next";
+    show_ques();
+}
+
+const show_ques = () => 
+{
+    let crntQus = questions[crntQusIndx];
+    let qusNo = crntQusIndx + 1;
+    ques.innerHTML = qusNo + "." + crntQus.qus;
+
+    crntQus.ans.forEach((ans) => {
+        const button = documen.createElement("button");
+        button.innerHTML = ans.text;
+        button.classList.add("btn");
+        ansBtn.appendChild(button);
+    })
+}
+
+start_quiz();
