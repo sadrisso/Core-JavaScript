@@ -14,6 +14,8 @@ an.party()
 an.party()
 
 
+// basic constructor... 
+
 function NewAnimal (name, desc)
 {
     this.x = 0;
@@ -30,3 +32,22 @@ let obj = new NewAnimal("Elephant", "is one of the most strongest animal");
 obj.party();
 obj.party();
 obj.party();
+
+
+let data = {};
+data.stuff = "Ho";
+console.log(data)
+
+let data2 = {};
+data2['stuff'] = 'Hi';
+
+console.log(data2[0])
+
+
+
+let btn = $(".btn");
+let body = $("body");
+
+btn.click(() => {
+    body.css("backgroundColor", "red")
+});
