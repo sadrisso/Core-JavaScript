@@ -65,3 +65,31 @@ console.log(person1.fullName)
 function get_full_name(first, last) {
     return first + " " + last;
 }
+
+
+function Student(name) {
+    this.name = name
+}
+
+Student.prototype.gender = "Female";
+let s1 = new Student("Ayesha");
+
+console.log(s1.gender)
+
+
+
+function Engineer(firstName, lastName) {
+    this.firstName = firstName,
+    this.lastName = lastName
+}
+
+Engineer.prototype.getFullName = function() {
+    return this.firstName + " " + this.lastName
+}
+
+let engineer1 = new Engineer("Shoeb", "Drisso");
+let engineer2 = new Engineer("Akter", "Drisso")
+
+console.log(engineer1)
+console.log(engineer1.getFullName());
+console.log(engineer2.getFullName());
