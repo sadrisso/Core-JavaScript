@@ -35,3 +35,19 @@ const random = {
 }
 
 random.greet();
+
+
+// object distructuring ...
+
+
+let human = {
+    name: "Milon",
+    age: 24,
+    gender: 'male',
+    skill: 'computer',
+    title: 'student'
+}
+
+const {name, age = 23, gender, skill, title} = human;
+
+console.log(skill, age, gender)
