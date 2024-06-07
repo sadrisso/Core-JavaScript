@@ -51,3 +51,17 @@ let body = $("body");
 btn.click(() => {
     body.css("backgroundColor", "red")
 });
+
+
+function Person(first, last, concat) {
+    this.firstName = first,
+    this.lastName = last,
+    this.fullName = concat
+}
+
+const person1 = new Person('Elon', 'Misk', get_full_name('Elon', 'Musk'))
+console.log(person1.fullName)
+
+function get_full_name(first, last) {
+    return first + " " + last;
+}
