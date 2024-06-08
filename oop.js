@@ -169,6 +169,12 @@ class Drisso {
     }
 }
 
+
+Drisso.prototype.welcome = () => {
+    console.log("Welcome!")
+}
+
+
 class Shoeb extends Drisso {
     constructor() {
         super('hi');
@@ -185,3 +191,20 @@ let shoeb = new Shoeb();
 
 console.log(shoeb.greet())
 console.log(drisso.greet())
+console.log(drisso)
+
+
+
+const man = {
+    name: 'Hklao',
+    age: 33,
+}
+
+const woman = {
+    name: 'Hklaooie',
+    age: 83,
+}
+
+
+man.__proto__ = woman;
+console.log(man)
