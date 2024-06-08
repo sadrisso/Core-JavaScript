@@ -165,14 +165,23 @@ class Drisso {
     }
 
     greet() {
-        return "hello " + this.name;
+        return "hello from drisso class " + this.name;
     }
 }
 
 class Shoeb extends Drisso {
+    constructor() {
+        super('hi');
+    }
 
+    //method overriding
+    greet() {
+        return "hello from shoeb class " + this.name;
+    }
 }
 
-let shoeb = new Shoeb("Shoeb");
+let drisso = new Drisso("Drisso")
+let shoeb = new Shoeb();
 
 console.log(shoeb.greet())
+console.log(drisso.greet())
