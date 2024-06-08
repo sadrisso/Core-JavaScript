@@ -1,5 +1,5 @@
 
-function PartyAnimal () 
+function PartyAnimal ()
 {
     this.x = 0;
     this.party = function () {
@@ -14,7 +14,7 @@ an.party()
 an.party()
 
 
-// basic constructor... 
+// basic constructor...
 
 function NewAnimal (name, desc)
 {
@@ -93,3 +93,64 @@ let engineer2 = new Engineer("Akter", "Drisso")
 console.log(engineer1)
 console.log(engineer1.getFullName());
 console.log(engineer2.getFullName());
+
+
+
+// basic class...
+
+
+class ClassName {
+
+    constructor(name, age) {
+
+        this.name = name;
+        this.age = age;
+
+    }
+
+    // class method getter
+    get greet() {
+        return "Hello " + this.name;
+    }
+
+    // setter
+    set changeName(newName) {
+        this.name = newName;
+    }
+}
+
+const class1 = new ClassName("Elon Musk", 52);
+const class2 = new ClassName("Bill Gets", 67);
+
+class1.changeName = "Drisso";
+class2.changeName = "Shoeb"
+
+console.log(class1, class2)
+console.log(class1.greet, class2.greet)
+
+
+
+// you can declire a class in the variable too..
+
+let Human = class {
+    constructor(name, age, skill) {
+        this.name = name;
+        this.age = age;
+        this.skill = skill;
+    }
+
+    get getName() {
+        return this.name;
+    }
+
+    set setName(newName) {
+        this.name = newName;
+    }
+}
+
+let p1 = new Human("Tesla", 33, "Software Engineer");
+let p2 = new Human("Elon", 66, "Mechanical Engineer");
+
+p1.setName = "Jef Bejos";
+
+console.log(p1)
