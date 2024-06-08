@@ -154,3 +154,25 @@ let p2 = new Human("Elon", 66, "Mechanical Engineer");
 p1.setName = "Jef Bejos";
 
 console.log(p1)
+
+
+
+// basic inheritance...
+
+class Drisso {
+    constructor(name) {
+        this.name = name;
+    }
+
+    greet() {
+        return "hello " + this.name;
+    }
+}
+
+class Shoeb extends Drisso {
+
+}
+
+let shoeb = new Shoeb("Shoeb");
+
+console.log(shoeb.greet())
