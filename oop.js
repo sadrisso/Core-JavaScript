@@ -208,3 +208,25 @@ const woman = {
 
 man.__proto__ = woman;
 console.log(man)
+
+
+
+class Hello {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    // private method
+    #concatName() {
+        return this.firstName + " " + this.lastName;
+    }
+
+    // accessing the private method
+    display() {
+        console.log(this.#concatName());
+    }
+}
+
+let h1 = new Hello("Harry", "Potter");
+h1.display()
