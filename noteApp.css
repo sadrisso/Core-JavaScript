@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: lightseagreen;
+    width: 550px;
+    height: 700px;
+    margin: 0 auto;
+    margin-top: 70px;
+    /* color: white; */
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 i {
+    margin-right: 10px;
+}
+
+h1 {
+    padding: 10px;
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 1rem;
+    background-color: brown;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.notes-container {
+    margin-top: 20px;
+}
+.input-box {
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.input-box i {
+    margin-left: 445px;
+}
