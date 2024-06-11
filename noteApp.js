@@ -11,5 +11,12 @@ createBtn.addEventListener("click", () => {
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
     img.src = "images/trush.jpg";
+    img.className = "img";
     notesContainer.appendChild(inputBox).appendChild(img);
 });
+
+notesContainer.addEventListener("click", (e) => {
+    if (e.target.tagName === "IMG") {
+        e.target.parentElement.remove();
+    }
+})

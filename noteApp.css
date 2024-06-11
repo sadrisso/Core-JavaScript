@@ -61,10 +61,11 @@ button:hover {
     font-size: 1.5rem;
 }
 
-.input-box img {
+.img {
     position: absolute;
     width: 30px;
     cursor: pointer;
     bottom: 15px;
     right: 15px;
+    color: black;
 }
