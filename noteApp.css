@@ -69,3 +69,7 @@ button:hover {
     right: 15px;
     color: black;
 }
+
+.img:hover {
+    cursor: pointer;
+}
