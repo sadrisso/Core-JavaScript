@@ -31,8 +31,12 @@ button {
     border-radius: 1rem;
     background-color: brown;
     color: white;
-    width: 30%;
+    width: 40%;
     font-size: 1rem;
+}
+
+button i {
+    margin-right: 10px;
 }
 
 button:hover {
@@ -43,16 +47,24 @@ button:hover {
 .notes-container {
     margin-top: 20px;
 }
+
 .input-box {
+    position: relative;
     width: 100%;
     max-width: 500px;
     min-height: 150px;
     background-color: white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
     font-size: 1.5rem;
 }
 
-.input-box i {
-    margin-left: 445px;
+.input-box img {
+    position: absolute;
+    width: 30px;
+    cursor: pointer;
+    bottom: 15px;
+    right: 15px;
 }
