@@ -1,69 +1,55 @@
+
 const questions = [
     {
-        qus: 'which is the most largest aminal in the world?',
-        ans: [
-            {text: 'shiyal', correct: false},
-            {text: 'murgi', correct: false},
-            {text: 'pakhi', correct: false},
-            {text: 'blue wheal', correct: ture},
+        question: "Which is the most largest animal in the world?",
+        answer: [
+            {text: "shark", correct: false},
+            {text: "elephant", correct: false},
+            {text: "gieeraf", correct: false},
+            {text: "blue wheal", correct: true},
         ]
     },
     {
-        qus: 'who is the most best batsman in the world',
-        ans: [
-            {text: 'shiyal', correct: false},
-            {text: 'murgi', correct: false},
-            {text: 'tendulkar', correct: true},
-            {text: 'blue wheal', correct: false}
+        question: "Who is the best crickter in bangladesh team?",
+        answer: [
+            {text: "mushfiq", correct: false},
+            {text: "shakib", correct: true},
+            {text: "mashrafi", correct: false},
+            {text: "tamim", correct: false},
         ]
     },
     {
-        qus: 'national flower in bangladesh?',
-        ans: [
-            {text: 'shiyal', correct: false},
-            {text: 'murgi', correct: false},
-            {text: 'pakhi', correct: false},
-            {text: 'shapla', correct: ture}
+        question: "Which is the national flower of bangladesh?",
+        answer: [
+            {text: "golap", correct: false},
+            {text: "joba", correct: false},
+            {text: "madhobilota", correct: false},
+            {text: "shapla", correct: true},
         ]
     },
     {
-        qus: 'highest hill in bangladesh?',
-        ans: [
-            {text: 'shiyal', correct: false},
-            {text: 'murgi', correct: false},
-            {text: 'pakhi', correct: false},
-            {text: 'jogi jotlong', correct: ture}
+        question: "Worlds largest country?",
+        answer: [
+            {text: "russia", correct: true},
+            {text: "canada", correct: false},
+            {text: "china", correct: false},
+            {text: "bangladesh", correct: false},
         ]
-    },
-]
+    }
+];
 
-const ques = document.querySelector(".ques");
-const ansBtn = document.querySelector(".ans-buttons");
-const nxtBtn = document.querySelector(".nxt-btn")
-let crntQusIndx = 0;
+
+const questionElement = document.querySelector("#questions");
+const answerButtons = document.querySelector("#answer-buttons");
+const nxtButton = document.querySelector("#nxt-btn");
+let crntQusIdx = 0;
 let score = 0;
 
 
-const start_quiz = () => 
+const start_quiz = () =>
 {
-    crntQusIndx = 0;
+    crntQusIdx = 0;
     score = 0;
-    nxtBtn.innerHTML = "Next";
-    show_ques();
+    nxtButton.innerHTML = "Next";
+
 }
-
-const show_ques = () => 
-{
-    let crntQus = questions[crntQusIndx];
-    let qusNo = crntQusIndx + 1;
-    ques.innerHTML = qusNo + "." + crntQus.qus;
-
-    crntQus.ans.forEach((ans) => {
-        const button = documen.createElement("button");
-        button.innerHTML = ans.text;
-        button.classList.add("btn");
-        ansBtn.appendChild(button);
-    })
-}
-
-start_quiz();
