@@ -51,5 +51,18 @@ const start_quiz = () =>
     crntQusIdx = 0;
     score = 0;
     nxtButton.innerHTML = "Next";
+    show_qustions();
+}
 
+const show_qustions = () =>
+{
+    let crntQus = questions[crntQusIdx];
+    let qusNo = crntQusIdx + 1;
+    questionElement.innerHTML = qusNo + ". " + crntQus.question;
+
+    crntQus.answer.forEach((ans) => {
+        let button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn")
+    })
 }
