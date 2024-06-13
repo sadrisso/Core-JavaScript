@@ -56,13 +56,44 @@ const start_quiz = () =>
 
 const show_qustions = () =>
 {
+    reset_state();
     let crntQus = questions[crntQusIdx];
     let qusNo = crntQusIdx + 1;
     questionElement.innerHTML = qusNo + ". " + crntQus.question;
 
     crntQus.answer.forEach((ans) => {
         let button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("btn")
-    })
+        button.innerHTML = ans.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if (ans.correct) {
+            button.dataset.correct = ans.correct;
+        }
+        button.addEventListener("click", select_answer);
+    });
 }
+
+
+const reset_state = () =>
+{
+    nxtButton.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+
+const select_answer = (e) =>
+{
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+
+    if (isCorrect) {
+        selectedBtn.classList.add = "correct";
+    } else {
+        selectedBtn.classList.add = "incorrect";
+    }
+}
+
+
+start_quiz();
