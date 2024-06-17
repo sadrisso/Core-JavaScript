@@ -4,7 +4,7 @@ body {
     background-color: black;
     overflow: hidden;
   }
-  
+
   span {
     background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
     width: 100px;
@@ -17,7 +17,7 @@ body {
     transform: translate(-50%, -50%);
     animation: animate 6s linear;
   }
-  
+
   @keyframes animate {
     0% {
       transform: translate(-50%, -50%);
