@@ -18,10 +18,6 @@ function update_text ()
         careersIdx++;
         charIdx = 0;
     }
-
-    if (careersIdx === careers.length) {
-        careersIdx == 0;
-    }
 }
 
 update_text();
