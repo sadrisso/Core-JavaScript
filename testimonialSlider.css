@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-container {
+    background-color: blue;
+    width: 700px;
+    height: 400px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: cursive;
+    position: relative;
+}
+
+.testimonial-container p,h4 {
+    margin-top: 90px;
+    font-size: 1.5rem;
+}
+
+
+img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+}
