@@ -33,10 +33,12 @@ body {
 
 .input:checked + .label {
     background-color: chocolate;
+    background-color: white;
 }
 
 .input:checked + .label .circle {
     animation: toggleOn .4s linear forwards;
+    background-color: black;
 }
 
 
