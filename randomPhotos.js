@@ -10,11 +10,10 @@ btnEl.addEventListener("click", () =>
 
 function addNewImg ()
 {
-    for (let index = 0; index < imgNum; index++)
+    for (let i = 0; i < imgNum; i++)
     {
         let newImgEl = document.createElement("img");
         newImgEl.src = `https://picsum.photos/300/300?random=${Math.random() * 2000}`;
         imgContainerEl.appendChild(newImgEl);
     }
-
 }
