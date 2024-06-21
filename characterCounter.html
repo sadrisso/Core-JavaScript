@@ -10,10 +10,10 @@
 
     <div class="container">
         <h1>Real Time Character Counter</h1>
-        <textarea name="char" id="text" class="text"></textarea>
+        <textarea name="char" id="textarea" class="textarea" maxlength="50" placeholder="Enter your text here.."></textarea>
         <div class="score">
-            <p>Total Character: 0</p>
-            <p>Remaining: 0</p>
+            <p>Total Character: <span class="total-character"></span></p>
+            <p>Remaining: <span class="remaining-character"></span></p>
         </div>
     </div>
     <script src="characterCounter.js"></script>
