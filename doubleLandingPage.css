@@ -11,14 +11,14 @@ body {
 .split {
     width: 50%;
     height: 100%;
+    top: 0;
 }
 
 .split.left {
     position: absolute;
     left: 0;
     background-color: pink;
-    top: 0;
-    background-image: url("https://cdn.mos.cms.futurecdn.net/5wDTVRZKp9R9XBGanPzCND-650-80.jpg.webp");
+    background-image: url("https://static.tnn.in/thumb/msid-110986427,thumbsize-12712,width-1280,height-720,resizemode-75/110986427.jpg");
     background-size: cover;
 }
 
@@ -26,7 +26,6 @@ body {
     position: absolute;
     right: 0;
     background-color: lightblue;
-    top: 0;
     background-image: url("https://www.zdnet.com/a/img/2024/02/02/1bfa7d30-112c-4906-83a7-ce12551b7b16/galaxy-s24-ultra.jpg");
     background-size: cover;
 }
@@ -45,6 +44,7 @@ h1 {
     color: white;
     font-size: 22px;
     transition: .6s background-color;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -52,4 +52,24 @@ h1 {
     background-color: tomato;
     color: black;
     border: 3px solid black;
+}
+
+.active-right .right {
+    width: 75%;
+}
+
+.active-right .left {
+    width: 25%;
+}
+
+.active-left .left {
+    width: 75%;
+}
+
+.active-left .right {
+    width: 25%;
+}
+
+.left , .right {
+    transition: width .5s ease-in-out ;
 }
