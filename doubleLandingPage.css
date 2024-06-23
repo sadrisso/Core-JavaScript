@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+
+.split {
+    width: 50%;
+    height: 100%;
+}
+
+.split.left {
+    position: absolute;
+    left: 0;
+    background-color: pink;
+    top: 0;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/5wDTVRZKp9R9XBGanPzCND-650-80.jpg.webp");
+    background-size: cover;
+}
+
+.split.right {
+    position: absolute;
+    right: 0;
+    background-color: lightblue;
+    top: 0;
+    background-image: url("https://www.zdnet.com/a/img/2024/02/02/1bfa7d30-112c-4906-83a7-ce12551b7b16/galaxy-s24-ultra.jpg");
+    background-size: cover;
+}
+
+h1 {
+    font-size: 100px;
+    color:aliceblue;
+    backdrop-filter: brightness(.5);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: solid 3px white;
+    outline: 0;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    transition: .6s background-color;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: tomato;
+    color: black;
+    border: 3px solid black;
+}
