@@ -7,6 +7,19 @@ for (let i = 0; i < 30; i++)
     containerEl.appendChild(colorContainerEl);
 }
 
+const colorContainerEls = document.querySelectorAll(".color-container");
+
+
+const generateColors = () =>
+{
+    colorContainerEls.forEach((colorContainerEl) =>
+    {
+        const newColorCode = randomColor();
+        colorContainerEl.style.backgroundColor = "#" + newColorCode;
+        colorContainerEl.innerHTML = "#" + newColorCode;
+    });
+}
+
 
 const randomColor = () =>
 {
@@ -17,8 +30,9 @@ const randomColor = () =>
     for (let i = 0; i < colorCodeLen; i++) {
         const randomNumber = Math.floor(Math.random() * chars.length);
         colorCode += chars.substring(randomNumber, randomNumber + 1);
-        console.log(colorCode)
     }
+    return colorCode;
 }
 
 randomColor();
+generateColors()
