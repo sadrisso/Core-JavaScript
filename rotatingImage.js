@@ -17,7 +17,7 @@ nextEl.addEventListener("click", () =>
     x -= 45;
     clearTimeout(timer)
     updateGallary();
-})
+});
 
 
 function updateGallary ()
@@ -27,6 +27,6 @@ function updateGallary ()
         x-=45
         updateGallary()
     }, 3000);
-}
+};
 
 updateGallary();
