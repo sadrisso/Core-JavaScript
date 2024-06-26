@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.loan-container {
+    background-color: teal;
+    color: aliceblue;
+    width: 380px;
+    height: 380px;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    font-size: 25px;
+    height: 30px;
+}
+
+.payment {
+    font-size: 20px;
+    font-weight: 600;
+    font-family:fantasy;
+    margin-top: 30px;
+    letter-spacing: 8px;
+}
