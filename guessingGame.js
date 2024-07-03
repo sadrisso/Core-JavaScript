@@ -50,8 +50,8 @@
 //         msg.innerText = `You lost, your choice ${userGuess} & Computer choice ${randomNumber}`
 //         container.style.backgroundColor = 'red';
 //     }
-    
-// } 
+
+// }
 
 
 let form = $('form');
@@ -61,7 +61,7 @@ let body = $('.container');
 let attempt = 0;
 
 
-form.submit((evt) => 
+form.submit((evt) =>
 {
     evt.preventDefault();
     let userValue = Number(userChoice.val());
@@ -73,7 +73,7 @@ form.submit((evt) =>
     }
 })
 
-const playGame = (userValue) => 
+const playGame = (userValue) =>
 {
     let compValue = genCompChoice(5)
 
@@ -88,7 +88,7 @@ const playGame = (userValue) =>
     }
 }
 
-const genCompChoice = (limit) => 
+const genCompChoice = (limit) =>
 {
     return Math.floor(Math.random() * limit + 1);
 }
